@@ -7,15 +7,25 @@
 body {
     font-family: Arial, sans-serif;
 }
+.menu {
+    position: relative;
+}
+
 .side-panel {
     display: none;
-    position: fixed;
+    position: absolute;
+
     background-color: rgba(0, 0, 0, 0.781);
+
     width: 50vw;
     height: 100vh;
+
     right: 0;
     top: 0;
+
+    z-index: 20;
 }
+
 
 .side-panel ul {
     display: flex;
@@ -325,7 +335,7 @@ body {
 }
 
 
-.menu:hover .side-panel {
+.links-btn:focus + .side-panel {
     display: block;
 }
 .side-panel ul li a {
